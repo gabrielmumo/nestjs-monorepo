@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/userapp/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/userapp/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/userapp",
+  "projects": {
+    "userapp": {
+      "type": "application",
+      "root": "apps/userapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/userapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/userapp/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "globallib": {
+      "type": "library",
+      "root": "libs/globallib",
+      "entryFile": "index",
+      "sourceRoot": "libs/globallib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/globallib/tsconfig.lib.json"
+      }
+    },
+    "userlib": {
+      "type": "library",
+      "root": "libs/userlib",
+      "entryFile": "index",
+      "sourceRoot": "libs/userlib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/userlib/tsconfig.lib.json"
+      }
+    },
+    "messagelib": {
+      "type": "library",
+      "root": "libs/messagelib",
+      "entryFile": "index",
+      "sourceRoot": "libs/messagelib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/messagelib/tsconfig.lib.json"
+      }
+    },
+    "integrationlib": {
+      "type": "library",
+      "root": "libs/integrationlib",
+      "entryFile": "index",
+      "sourceRoot": "libs/integrationlib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/integrationlib/tsconfig.lib.json"
+      }
+    },
+    "messageapp": {
+      "type": "application",
+      "root": "apps/messageapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/messageapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/messageapp/tsconfig.app.json"
+      }
+    }
+  }
+}

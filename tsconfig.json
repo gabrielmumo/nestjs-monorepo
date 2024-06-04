@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/globallib": [
+        "libs/globallib/src"
+      ],
+      "@app/globallib/*": [
+        "libs/globallib/src/*"
+      ],
+      "@app/userlib": [
+        "libs/userlib/src"
+      ],
+      "@app/userlib/*": [
+        "libs/userlib/src/*"
+      ],
+      "@app/messagelib": [
+        "libs/messagelib/src"
+      ],
+      "@app/messagelib/*": [
+        "libs/messagelib/src/*"
+      ],
+      "@app/integrationlib": [
+        "libs/integrationlib/src"
+      ],
+      "@app/integrationlib/*": [
+        "libs/integrationlib/src/*"
+      ]
+    }
+  }
+}

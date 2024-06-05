@@ -11,17 +11,16 @@ export class MessageappService {
     private mailService: MailerService,
     private readonly configService: ConfigService,
   ) {}
-  async getHello(user: CreatedUserDto): Promise<string> {
+  handleUserCreatedMessage(user: CreatedUserDto) {
     const html = pug.renderFile(
       './libs/messagelib/templates/notification.pug',
       user,
     );
-    await this.mailService.sendMail({
+    this.mailService.sendMail({
       to: user.username,
       from: this.configService.get('SES_FROM_MAIL'),
       subject: 'User Created',
       html: html,
     });
-    return await html;
   }
 }

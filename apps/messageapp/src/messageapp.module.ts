@@ -3,11 +3,11 @@ import { MessageappController } from './messageapp.controller';
 import { MessageappService } from './messageapp.service';
 import { GloballibModule } from '@app/globallib';
 import { MessagelibModule } from '@app/messagelib';
-import { EmailService } from '@app/messagelib/services/messagelib.email.service';
+import { EmailMessageService } from '@app/messagelib/services/message.email.service';
 
 @Module({
   imports: [GloballibModule, MessagelibModule],
   controllers: [MessageappController],
-  providers: [MessageappService, EmailService],
+  providers: [MessageappService, EmailMessageService],
 })
 export class MessageappModule {}

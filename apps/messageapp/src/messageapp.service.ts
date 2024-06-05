@@ -1,3 +1,4 @@
+import { CreatedUserDto } from '@app/userlib/dtos/user.dto';
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -10,10 +11,10 @@ export class MessageappService {
     private mailService: MailerService,
     private readonly configService: ConfigService,
   ) {}
-  async getHello(): Promise<string> {
+  async getHello(user: CreatedUserDto): Promise<string> {
     const html = pug.renderFile('./libs/messagelib/templates/notification.pug');
     await this.mailService.sendMail({
-      to: 'gabriel.munera@b2crypto.com',
+      to: user.username,
       from: this.configService.get('SES_FROM_MAIL'),
       subject: 'User Created',
       html: html,

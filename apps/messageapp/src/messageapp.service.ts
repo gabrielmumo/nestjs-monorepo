@@ -12,7 +12,10 @@ export class MessageappService {
     private readonly configService: ConfigService,
   ) {}
   async getHello(user: CreatedUserDto): Promise<string> {
-    const html = pug.renderFile('./libs/messagelib/templates/notification.pug');
+    const html = pug.renderFile(
+      './libs/messagelib/templates/notification.pug',
+      user,
+    );
     await this.mailService.sendMail({
       to: user.username,
       from: this.configService.get('SES_FROM_MAIL'),

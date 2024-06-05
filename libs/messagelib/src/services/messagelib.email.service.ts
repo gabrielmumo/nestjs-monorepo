@@ -1,13 +1,11 @@
 import { CreatedUserDto } from '@app/userlib/dtos/user.dto';
 import { MailerService } from '@nestjs-modules/mailer';
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import * as pug from 'pug';
 
 @Injectable()
 export class EmailService {
-  private readonly logger = new Logger(EmailService.name);
-
   constructor(
     private mailerService: MailerService,
     private readonly configService: ConfigService,
@@ -23,6 +21,9 @@ export class EmailService {
   }
 
   private compileHtml(user: CreatedUserDto) {
-    return pug.renderFile('./libs/messagelib/templates/notification.pug', user);
+    return pug.renderFile(
+      './libs/messagelib/templates/notification.email.pug',
+      user,
+    );
   }
 }

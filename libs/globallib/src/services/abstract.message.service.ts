@@ -1,4 +1,4 @@
-import { MessageDto } from '@app/messagelib/dtos/message.dto';
+import { MessageDto } from '@app/globallib/dtos/message.dto';
 import { Injectable } from '@nestjs/common';
 import * as pug from 'pug';
 

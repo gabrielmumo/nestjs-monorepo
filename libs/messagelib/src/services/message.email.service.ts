@@ -1,6 +1,6 @@
 import { AbstractMessageService } from '@app/globallib/services/abstract.message.service';
 import { Injectable } from '@nestjs/common';
-import { MessageDto } from '../dtos/message.dto';
+import { MessageDto } from '../../../globallib/src/dtos/message.dto';
 import { MailerService } from '@nestjs-modules/mailer';
 import { ConfigService } from '@nestjs/config';
 

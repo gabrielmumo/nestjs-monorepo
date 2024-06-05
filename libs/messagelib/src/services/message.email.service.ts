@@ -18,7 +18,7 @@ export class EmailMessageService<C> extends AbstractMessageService<C> {
       to: message.to,
       from: this.configService.get('SES_FROM_MAIL'),
       subject: message.title,
-      html: this.compileTemplate(message.template, message.context),
+      html: super.compileTemplate(message.template, message.context),
     });
   }
 }

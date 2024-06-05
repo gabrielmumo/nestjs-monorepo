@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MessagelibService } from './messagelib.service';
+import { MessagelibService } from './services/messagelib.service';
 
 describe('MessagelibService', () => {
   let service: MessagelibService;

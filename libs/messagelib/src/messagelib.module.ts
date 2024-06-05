@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
-import { MessagelibService } from './messagelib.service';
+import { MessagelibService } from './services/messagelib.service';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { EmailService } from './services/messagelib.email.service';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -21,7 +23,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
       },
     }),
   ],
-  providers: [MessagelibService],
-  exports: [MessagelibService],
+  providers: [MessagelibService, EmailService, ConfigService],
+  exports: [MessagelibService, EmailService, ConfigService],
 })
 export class MessagelibModule {}

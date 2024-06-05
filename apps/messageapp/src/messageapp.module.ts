@@ -3,11 +3,11 @@ import { MessageappController } from './messageapp.controller';
 import { MessageappService } from './messageapp.service';
 import { GloballibModule } from '@app/globallib';
 import { MessagelibModule } from '@app/messagelib';
-import { ConfigService } from '@nestjs/config';
+import { EmailService } from '@app/messagelib/services/messagelib.email.service';
 
 @Module({
   imports: [GloballibModule, MessagelibModule],
   controllers: [MessageappController],
-  providers: [MessageappService, ConfigService],
+  providers: [MessageappService, EmailService],
 })
 export class MessageappModule {}

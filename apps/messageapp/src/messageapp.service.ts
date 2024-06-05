@@ -1,26 +1,13 @@
+import { EmailService } from '@app/messagelib/services/messagelib.email.service';
 import { CreatedUserDto } from '@app/userlib/dtos/user.dto';
-import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable, Logger } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import * as pug from 'pug';
 
 @Injectable()
 export class MessageappService {
-  private readonly logger = new Logger(MessageappService.name);
-  constructor(
-    private mailService: MailerService,
-    private readonly configService: ConfigService,
-  ) {}
+  constructor(private emailService: EmailService) {}
+
   handleUserCreatedMessage(user: CreatedUserDto) {
-    const html = pug.renderFile(
-      './libs/messagelib/templates/notification.pug',
-      user,
-    );
-    this.mailService.sendMail({
-      to: user.username,
-      from: this.configService.get('SES_FROM_MAIL'),
-      subject: 'User Created',
-      html: html,
-    });
+    this.emailService.sendEmail(user);
+    Logger.debug(MessageappService.name, 'Message sent');
   }
 }

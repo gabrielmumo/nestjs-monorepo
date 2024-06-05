@@ -12,6 +12,7 @@ import { MessageEnum } from '@app/messagelib/enums/message.enum';
 export class MessageappController {
   constructor(private readonly messageappService: MessageappService) {}
 
+  // Pasar a event pattern
   @MessagePattern(MessageEnum.USER_CREATED_MESSAGE_QUEUE)
   async userCreatedNotification(
     @Payload() data: any,

@@ -46,15 +46,6 @@
         "tsConfigPath": "libs/userlib/tsconfig.lib.json"
       }
     },
-    "messagelib": {
-      "type": "library",
-      "root": "libs/messagelib",
-      "entryFile": "index",
-      "sourceRoot": "libs/messagelib/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/messagelib/tsconfig.lib.json"
-      }
-    },
     "integrationlib": {
       "type": "library",
       "root": "libs/integrationlib",
@@ -62,15 +53,6 @@
       "sourceRoot": "libs/integrationlib/src",
       "compilerOptions": {
         "tsConfigPath": "libs/integrationlib/tsconfig.lib.json"
-      }
-    },
-    "messageapp": {
-      "type": "application",
-      "root": "apps/messageapp",
-      "entryFile": "main",
-      "sourceRoot": "apps/messageapp/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/messageapp/tsconfig.app.json"
       }
     }
   }

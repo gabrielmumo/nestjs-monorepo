@@ -18,30 +18,12 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@app/globallib": [
-        "libs/globallib/src"
-      ],
-      "@app/globallib/*": [
-        "libs/globallib/src/*"
-      ],
-      "@app/userlib": [
-        "libs/userlib/src"
-      ],
-      "@app/userlib/*": [
-        "libs/userlib/src/*"
-      ],
-      "@app/messagelib": [
-        "libs/messagelib/src"
-      ],
-      "@app/messagelib/*": [
-        "libs/messagelib/src/*"
-      ],
-      "@app/integrationlib": [
-        "libs/integrationlib/src"
-      ],
-      "@app/integrationlib/*": [
-        "libs/integrationlib/src/*"
-      ]
+      "@app/globallib": ["libs/globallib/src"],
+      "@app/globallib/*": ["libs/globallib/src/*"],
+      "@app/userlib": ["libs/userlib/src"],
+      "@app/userlib/*": ["libs/userlib/src/*"],
+      "@app/integrationlib": ["libs/integrationlib/src"],
+      "@app/integrationlib/*": ["libs/integrationlib/src/*"]
     }
   }
 }

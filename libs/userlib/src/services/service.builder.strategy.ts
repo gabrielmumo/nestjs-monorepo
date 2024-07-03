@@ -10,7 +10,6 @@ export class BuilderStrategyService<T> {
 
   constructor(
     @InjectRepository(User) private typeUserRepository: MongoRepository<User>,
-    //@InjectRepository(Message) private typeMessageRepository: MongoRepository<Message>,
     @InjectRepository(User) private fakeRepository: MongoRepository<User>,
   ) {
     this.builder.set('typeorm', this.typeUserRepository);

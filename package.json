@@ -13,7 +13,6 @@
     "start:dev": "concurrently -c \"cyan.bold,red.bold\" \"npm:dev-*\"",
     "dev-user": "nest start --watch userapp",
     "dev-gateway": "nest start --watch gateway",
-    "dev-message": "nest start --watch messageapp",
     "debug-user": "nest start --debug --watch userapp",
     "debug-gateway": "nest start --debug --watch gateway",
     "prod-user": "node dist/apps/userapp/main",
@@ -91,7 +90,6 @@
     "moduleNameMapper": {
       "^@app/globallib(|/.*)$": "<rootDir>/libs/globallib/src/$1",
       "^@app/userlib(|/.*)$": "<rootDir>/libs/userlib/src/$1",
-      "^@app/messagelib(|/.*)$": "<rootDir>/libs/messagelib/src/$1",
       "^@app/integrationlib(|/.*)$": "<rootDir>/libs/integrationlib/src/$1"
     }
   }

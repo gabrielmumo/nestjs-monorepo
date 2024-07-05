@@ -54,6 +54,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/integrationlib/tsconfig.lib.json"
       }
+    },
+    "integration": {
+      "type": "application",
+      "root": "apps/integration",
+      "entryFile": "main",
+      "sourceRoot": "apps/integration/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/integration/tsconfig.app.json"
+      }
     }
   }
 }
